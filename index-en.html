@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Balmora Residence</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ionicons (for the icon in the mobile menu) -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <!--Header-->
+  <header>
+    <a href="/" class="logo"><img src="image/logo.png" style="height: 100px; width: 100px;" alt="Logo"></a>
+
+    <!-- hamburger / close -->
+    <a href="#" class="menu" aria-label="Toggle menu" role="button">
+      <i class="fas fa-bars open"></i>
+      <i class="fas fa-times close"></i>
+    </a>
+
+    <ul class="nav">
+      <li><a class="nav-btn active" href="#home"><i class="fas fa-home"></i></a></li>
+      <li><a class="nav-btn" data-target="about" href="#about">About</a></li>
+      <li><a class="nav-btn" data-target="services" href="#services">Amenities</a></li>
+      <li><a class="nav-btn" data-target="portfolio" href="#gallery">Gallery</a></li>
+      <li><a class="nav-btn" data-target="activities" href="#activities">Activities</a></li>
+      <li><a class="nav-btn" data-target="portfolio" href="#portfolio">Prices</a></li>
+      <li><a class="nav-btn" data-target="contact" href="#contact">Contacts</a></li>
+
+      <li class="nav-item d-flex align-items-center ms-2">
+        <!-- EN version shows BG flag (click -> back to BG) -->
+        <button class="langSwitch btn">
+          <img class="flagIcon" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+        </button>
+      </li>
+    </ul>
+
+    <!-- <div class="search">
+      <input type="text" placeholder="search" />
+      <i class="fas fa-search"></i>
+    </div>-->
+  </header>
+
+  <!-- Mobile Navigation -->
+  <ul class="nav-mobile">
+    <li>
+      <a class="nav-btn active" href="#" onclick="resetHeader();">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </li>
+    <li><a class="nav-btn" href="#about" data-target="about">About</a></li>
+    <li><a class="nav-btn" href="#services" data-target="services">Amenities</a></li>
+    <li><a class="nav-btn" href="#gallery" data-target="portfolio">Gallery</a></li>
+    <li><a class="nav-btn" data-target="activities" href="#activities">Activities</a></li>
+    <li><a class="nav-btn" href="#portfolio" data-target="portfolio">Prices</a></li>
+    <li><a class="nav-btn" href="#contact"  data-target="contact">Contacts</a></li>
+    <li class="nav-item d-flex align-items-center ms-2">
+      <button class="langSwitch btn">
+        <img class="flagIcon" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+      </button>
+    </li>
+  </ul>
+
+  <div class="banner container-fluid" id="home">
+    <div class="bg-slide slide-1 active">
+      <div class="content">
+        <h1>Balmora Residence</h1>
+        <p>
+          Enjoy modern amenities, spacious rooms and a welcoming atmosphere for an unforgettable stay. Discover the ideal place for relaxation, family vacations and adventures close to nature.
+        </p>
+      </div>
+      <div class="circle bg">
+        <img src="image/villa.png" alt="Balmora Residence">
+      </div>
+    </div>
+
+    <div class="bg-slide slide-2">
+      <div class="content">
+        <h1>Nature</h1>
+        <p>
+          The surroundings offer picturesque views, fresh air and opportunities for walks in nature. Mountain trails, green meadows and tranquility await you just steps away from guest house “Semara”.
+        </p>
+      </div>
+      <div class="circle bg">
+        <img src="image/villa2.png" alt="Nature around Balmora">
+      </div>
+    </div>
+
+    <div class="bg-slide slide-3">
+      <div class="content">
+        <h1>Fun</h1>
+        <p>
+          Barbecue area, games and cozy corners for shared moments. Nearby attractions and options for active tourism make your stay even more exciting.
+        </p>
+      </div>
+      <div class="circle bg">
+        <img src="image/view-from-garden.png" alt="Garden view">
+      </div>
+    </div>
+
+    <ul class="slide-loader">
+      <li><a class="slide-btn active" data-target="slide-1">1</a></li>
+      <li><a class="slide-btn" data-target="slide-2">2</a></li>
+      <li><a class="slide-btn" data-target="slide-3">3</a></li>
+    </ul>
+
+    <div class="share">
+      <p>Share</p>
+      <a href="https://www.facebook.com/"><i class="fas fa-share-alt"></i></a>
+    </div>
+
+    <div class="lead">
+      <svg viewBox="0 0 100 100" width="100" height="100">
+        <defs>
+          <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+        </defs>
+        <text font-size="17">
+          <textPath xlink:href="#circle">Be our guest!</textPath>
+        </text>
+      </svg>
+      <a href="#contact" class="move-down"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container-narrow">
+      <h2 class="section-title">About us</h2>
+
+      <p class="lead-text">
+        Welcome to Balmora Residence – suitable for those who appreciate comfort and convenience combined with first-class service – families, private groups, corporate events and guests looking for an unforgettable experience in the heart of the Balkan mountain.
+      </p>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+          <h3>Location</h3>
+          <p>
+            Balmora Residence is an elegant newly built villa, located at the foot of the majestic Botev Peak, in the picturesque “Panitsite” area near the town of Kalofer.
+          </p>
+          <a href="location.html" class="card-cta">Find us →</a>
+        </div>
+
+        <div class="about-card">
+          <h3>Comfort</h3>
+          <p>
+            Rooms with comfortable beds, private bathrooms, terraces with a view, fast Wi-Fi and everything you need for a peaceful stay.
+          </p>
+          <a href="location.html" class="card-cta">Learn more →</a>
+        </div>
+
+        <div class="about-card">
+          <h3>Amenities</h3>
+          <p>
+            The house offers: a spacious living room with a large table, soft seating and a modern fireplace, a large fully equipped kitchen, a veranda and a large balcony with a view towards the Balkan mountain and Botev Peak, a huge yard suitable for children’s games or outdoor events, enclosed parking, charcoal barbecue, board games and toys for children, bicycles for rides around the area.
+          </p>
+          <a href="location.html" class="card-cta">See more →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services / Amenities ===== -->
+  <section id="services" class="section section-alt">
+    <div class="container-narrow">
+      <h2 class="section-title">Our services</h2>
+      <p class="lead-text">
+        Choose an amenity from the list to see all details and conditions.
+      </p>
+
+      <ul class="amenities">
+
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Free high-speed Wi-Fi"
+            data-desc="Internet over 100 Mbps in all rooms and the yard. Ideal for smart TV, online work and gaming."
+            data-img="img/wi-fi.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-wifi"></i>
+          <span>Free Wi-Fi</span>
+          <button type="button" class="amenity-info" aria-label="More info"><i class="fas fa-info-circle"></i></button>
+        </li>
+
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Homemade breakfast on request"
+            data-desc="Prepared with fresh local products. Vegetarian options available. Room delivery possible."
+            data-img="img/breakfast.jpg"
+            data-included="no" data-price="15 BGN / person">
+          <i class="fas fa-coffee"></i>
+          <span>Homemade breakfast on request</span>
+          <button type="button" class="amenity-info" aria-label="More info"><i class="fas fa-info-circle"></i></button>
+        </li>
+
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Outdoor swimming pool (seasonal)"
+            data-desc="Size: 7 × 4 m · depth 1.3 m · period: 1 June – 15 September. Sunbeds and umbrellas included."
+            data-img="img/swimming-pool-view.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-swimming-pool"></i>
+          <span>Outdoor swimming pool (seasonal)</span>
+          <button type="button" class="amenity-info" aria-label="More info"><i class="fas fa-info-circle"></i></button>
+        </li>
+
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Barbecue & fireplace corner"
+            data-desc="Outdoor fireplace and barbecue, table for up to 10 people. Firewood/charcoal and utensils — upon request."
+            data-img="img/bbq.jpg"
+            data-included="yes" data-price="Firewood on request">
+          <i class="fas fa-fire"></i>
+          <span>Barbecue & fireplace corner</span>
+          <button type="button" class="amenity-info" aria-label="More info"><i class="fas fa-info-circle"></i></button>
+        </li>
+
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Free parking"
+            data-desc="Parking in the yard for up to 4 cars. Video surveillance."
+            data-img="img/parking.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-car"></i>
+          <span>Free parking</span>
+          <button type="button" class="amenity-info" aria-label="More info"><i class="fas fa-info-circle"></i></button>
+        </li>
+
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Children’s corner and lawn areas"
+            data-desc="Playground, sandbox, fenced green area. Suitable for small children."
+            data-img="img/kids-playground.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-baby"></i>
+          <span>Children’s corner and lawns</span>
+          <button type="button" class="amenity-info" aria-label="More info"><i class="fas fa-info-circle"></i></button>
+        </li>
+
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Sauna / Jacuzzi"
+            data-desc="Sauna for up to 4 people + outdoor jacuzzi. Advance booking required."
+            data-img="img/sauna.jpg"
+            data-included="no" data-price="40 BGN / hour">
+          <i class="fas fa-dumbbell"></i>
+          <span>Sauna / Jacuzzi</span>
+          <button type="button" class="amenity-info" aria-label="More info"><i class="fas fa-info-circle"></i></button>
+        </li>
+
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Pet-friendly"
+            data-desc="We accept pets up to 10 kg. Cleaning fee: 20 BGN per stay. Prior request required."
+            data-img="img/dogs-allow.jpg"
+            data-included="no" data-price="20 BGN / stay">
+          <i class="fas fa-paw"></i>
+          <span>Pet-friendly</span>
+          <button type="button" class="amenity-info" aria-label="More info"><i class="fas fa-info-circle"></i></button>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- === Gallery Section === -->
+  <section id="gallery" class="section section-alt">
+    <div class="container-narrow">
+
+      <h2 class="section-title">Gallery</h2>
+
+      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner rounded-4 shadow-lg">
+
+          <div class="carousel-item active">
+            <img src="image/kitchen.png" class="d-block w-100" alt="Kitchen">
+          </div>
+
+          <div class="carousel-item">
+            <img src="image/bbq.png" class="d-block w-100" alt="Barbecue area">
+          </div>
+
+          <div class="carousel-item">
+            <img src="image/bethroom1.png" class="d-block w-100" alt="Bathroom">
+          </div>
+
+          <div class="carousel-item">
+            <img src="image/toilet.png" class="d-block w-100" alt="Toilet">
+          </div>
+
+          <div class="carousel-item">
+            <img src="image/living-room.png" class="d-block w-100" alt="Living room">
+          </div>
+
+        </div>
+
+        <!-- Arrows -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+
+    </div>
+
+    <a href="gallery-full.html" class="gallery-cta">View more photos →</a>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="activities" class="section activities-section">
+    <div class="container-narrow">
+
+      <h2 class="section-title">Activities in the area</h2>
+
+      <div class="activities-cards">
+
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/activity-hiking.jpg" alt="Hiking routes">
+          </div>
+          <div class="activity-content">
+            <h3>Hiking routes</h3>
+            <p>Eco trails to Botev Peak, Byala Reka, Rayskoto Praskalo waterfall and many easy family routes.</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/activity-biking.jpg" alt="Cycling">
+          </div>
+          <div class="activity-content">
+            <h3>Cycling</h3>
+            <p>Diverse routes suitable for mountain and family cycling. The residence also provides bicycles for guests.</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/activity-nature.jpg" alt="Nature and picnics">
+          </div>
+          <div class="activity-content">
+            <h3>Walks and picnics</h3>
+            <p>Crystal clear air, meadows, forests and quiet places to relax in nature.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Offers / Pricing ===== -->
+  <section id="portfolio" class="section">
+    <div class="container-narrow">
+      <h2 class="section-title">Offers & Prices</h2>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Whole residence</h3>
+          <p class="price">from <strong>600 BGN</strong> / night</p>
+          <ul>
+            <li>Capacity: 17 + 3 people</li>
+            <li>All amenities included</li>
+            <li>7 rooms with a large double bed</li>
+            <li>1 room with three single beds</li>
+            <li><strong>Price for minimum 2 nights on weekdays</strong></li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Send inquiry</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Whole residence</h3>
+          <p class="price">from <strong>700 BGN</strong> / night</p>
+          <ul>
+            <li>Capacity: 17 + 3 people</li>
+            <li>All amenities included</li>
+            <li>7 rooms with a large double bed</li>
+            <li>1 room with three single beds</li>
+            <li><strong>Price for minimum 2 nights over the weekend</strong></li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Check availability</a>
+        </div>
+
+        <div class="price-card">
+          <h3>Whole residence</h3>
+          <p class="price">from <strong>1000 BGN</strong> / night</p>
+          <ul>
+            <li>Capacity: 17 + 3 people</li>
+            <li>All amenities included</li>
+            <li>7 rooms with a large double bed</li>
+            <li>1 room with three single beds</li>
+            <li><strong>Price for 1 night</strong></li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Request an offer</a>
+        </div>
+      </div>
+
+      <p class="note">
+        * The prices are indicative and may vary depending on season, holidays and occupancy.
+        Contact us for a personalized offer and availability.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container-narrow">
+      <h2 class="section-title">Contacts & Location</h2>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Get in touch with us</h3>
+          <p><i class="fas fa-phone"></i> <a href="tel:+359888123456">+359 888 123 456</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@guesthouse.bg">info@guesthouse.bg</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> Sample village, Centralna str. 12</p>
+
+          <form class="contact-form" onsubmit="event.preventDefault(); document.querySelector('#contact').scrollIntoView({behavior:'smooth'}); alert('Thank you! We will contact you.');">
+            <div class="form-row">
+              <input type="text" placeholder="Name" required>
+              <input type="tel" placeholder="Phone" required>
+            </div>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="4" placeholder="Message / Dates / Number of guests" required></textarea>
+            <button class="btn-primary" type="submit">Send inquiry</button>
+          </form>
+        </div>
+
+        <div class="map-card">
+          <div class="map-embed">
+            <!-- Replace with real Google Maps embed when you have an address -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96427.349!2d23.25!3d42.70!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z44Kq44O844OT44Or!5e0!3m2!1sen!2sbg!4v1699999999999"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="border-radius:16px;">
+        <div class="modal-header">
+          <h5 class="modal-title">Get in touch with us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We will contact you.');">
+
+            <!-- Name and phone -->
+            <div class="form-row">
+              <input type="text" placeholder="Name" required>
+              <input type="tel" placeholder="Phone" required>
+            </div>
+
+            <!-- Email -->
+            <input type="email" placeholder="Email" required>
+
+            <!-- Dates -->
+            <div class="form-row">
+              <label style="font-size:0.9em;">Check-in date:</label>
+              <label style="font-size:0.9em;">Check-out date:</label>
+            </div>
+            <div class="form-row">
+              <input type="date" required>
+              <input type="date" required>
+            </div>
+
+            <!-- Message -->
+            <textarea rows="4" placeholder="Message / Number of guests / Special requests" required></textarea>
+
+            <button class="btn-primary" type="submit">Send inquiry</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <a href="#" id="scrollTopBtn" class="scroll-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- Service Info Modal -->
+  <div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius:16px; overflow:hidden;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="serviceModalTitle">Service</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <img id="serviceModalImg" src="img/guest-house.jpg" alt="Service Preview"
+               style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:14px;">
+
+          <div class="badges" id="serviceBadges">
+            <!-- dynamic badges: Included / Extra charge -->
+          </div>
+
+          <p id="serviceModalDesc" style="margin:0; font-size:1rem; line-height:1.6;">
+            Choose an amenity to see details.
+          </p>
+        </div>
+
+        <div class="modal-footer" style="gap:8px;">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="serviceToContactBtn">
+            Send inquiry
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="tel:+359888123456" class="sticky-call">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="image/logo.png" alt="Logo">
+        </div>
+
+        <div class="footer-message">
+          <p>
+            Welcome to Balmora Residence – a place where comfort, nature
+            and tranquility await you. Thank you for being our guests!
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:+359888123456"><i class="fas fa-phone-alt"></i></a>
+        <a href="mailto:info@guesthouse.bg"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <p class="footer-copy">
+        © 2025 Balmora Residence — All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+  <script>
+    // Simple service modal title/desc sync
+    document.querySelectorAll('.amenity').forEach(item => {
+      item.addEventListener('click', () => {
+        const titleEl = document.getElementById('serviceModalTitle');
+        const descEl = document.getElementById('serviceModalDesc');
+
+        if (!titleEl || !descEl) return;
+
+        titleEl.textContent = item.getAttribute('data-title') || 'Service';
+        descEl.textContent = item.getAttribute('data-desc') || '';
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <!-- script.js should contain the language redirect logic for .langSwitch -->
+</body>
+</html>

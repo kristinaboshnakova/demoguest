@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ionicons (за иконата в mobile менюто) -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <!--Header-->
+  <header>
+    <a href="/" class="logo"><img src="image/logo.png" style="height: 100px; width: 100px;" alt=""></a>
+
+    <!-- hamburger / close -->
+    <a href="#" class="menu"    aria-label="Toggle menu" role="button">
+      <i class="fas fa-bars open"></i>
+      <i class="fas fa-times close"></i>
+    </a>
+
+    <ul class="nav">
+      <li><a class="nav-btn active" href="#home"><i class="fas fa-home"></i></a></li>
+      <li><a class="nav-btn " data-target="about" href="#about">За нас</a></li>
+      <li><a class="nav-btn" data-target="services" href="#services">Удобства</a></li>
+      <li><a class="nav-btn" data-target="portfolio" href="#gallery">Галерия</a></li>
+      <li><a class="nav-btn" data-target="activities" href="#activities">Активности</a></li>
+      <li><a class="nav-btn" data-target="portfolio" href="#portfolio">Цени</a></li>
+      <li><a class="nav-btn" data-target="contact" href="#contact">Контакти</a></li>
+      <button class="langSwitch btn btn-outline-light d-flex align-items-center gap-2 px-3 py-1">
+        <img class="flagIcon" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+       <!-- <span class="langText">EN</span>-->
+      </button>
+      
+      
+      
+    
+      
+    </ul>
+
+   <!-- <div class="search">
+      <input type="text" placeholder="search" />
+      <i class="fas fa-search"></i>
+    </div>-->
+  </header>
+
+  <!-- Mobile Navigation -->
+  <ul class="nav-mobile">
+    <li>
+      <a class="nav-btn active" href="#" onclick="resetHeader();">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </li>
+    <li><a class="nav-btn" href="#about" data-target="about">За нас</a></li>
+    <li><a class="nav-btn" href="#services" data-target="services">Удобства</a></li>
+    <li><a class="nav-btn" href="#gallery" data-target="portfolio">Галерия</a></li>
+    <li><a class="nav-btn" data-target="activities" href="#activities">Активности</a></li>
+    <li><a class="nav-btn" href="#portfolio" data-target="portfolio">Цени</a></li>
+    <li><a class="nav-btn" href="#contact"  data-target="contact">Контакти</a></li>
+    <button class="langSwitch btn btn-outline-light d-flex align-items-center gap-2 px-3 py-1">
+      <img class="flagIcon" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+     <!--<span class="langText">EN</span>--> 
+    </button>
+    
+    
+    
+    
+  </ul>
+
+  <div class="banner container-fluid">
+    <div class="bg-slide slide-1 active">
+      <div class="content">
+        <h1>Резиденция Балмора</h1>
+        <p> Насладете се на модерни удобства, просторни стаи и гостоприемна атмосфера за незабравима почивка. Открийте идеалното място за релакс, семейни ваканции и приключения близо до природата.</p>
+      </div>
+      <div class="circle bg">
+      <img src="image/villa.png" alt="">
+    </div>
+</div>
+
+    <div class="bg-slide slide-2">
+      <div class="content">
+        <h1>Природа</h1>
+        <p>Околността предлага живописни гледки, чист въздух и възможности за разходки сред природата. Планински пътеки, зелени поляни и тишина ви очакват на крачка от къща „Семара“.</p>
+      </div>
+      <div class="circle bg">
+       
+       
+          <img src="image/villa2.png" alt="">
+     
+      </div>
+    </div>
+
+    <div class="bg-slide slide-3">
+      <div class="content">
+        <h1>Забава</h1>
+        <p>Барбекю зона, игри и уютни кътове за споделени моменти. Атракциите наблизо и възможностите за активен туризъм правят престоя ви още по-вълнуващ.</p>
+      </div>
+      <div class="circle bg">
+        <img src="image/view-from-garden.png" alt="">
+       
+        </div>
+      </div>
+    
+
+    <ul class="slide-loader">
+      <li><a class="slide-btn active" data-target="slide-1">1</a></li>
+      <li><a class="slide-btn" data-target="slide-2">2</a></li>
+      <li><a class="slide-btn" data-target="slide-3">3</a></li>
+    </ul>
+
+    <div class="share">
+      <p>Сподели</p>
+      <a href="https://www.facebook.com/"><i class="fas fa-share-alt"></i></a>
+    </div>
+
+    <div class="lead">
+      <svg viewBox="0 0 100 100" width="100" height="100">
+        <defs>
+          <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+        </defs>
+        <text font-size="17">
+          <textPath xlink:href="#circle">Бъди наш гост!</textPath>
+        </text>
+      </svg>
+      <a href="#contact" class="move-down"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </div>
+
+
+
+  <section id="about" class="section">
+    <div class="container-narrow">
+      <h2 class="section-title">За нас</h2>
+  
+      <p class="lead-text">
+        Добре дошли в Резиденция Балмора - подходяща е за ценители на уюта и удобството, съчетани с първокласно обслужване – семейства, частни компании, корпоративни събития и гости, 
+        търсещи незабравимо изживяване в сърцето на Балкана.
+      </p>
+  
+      <div class="about-grid">
+  
+        <div class="about-card">
+          <h3>Локация</h3>
+          <p>Резиденция Балмора е изискана новопостроена вила, разположена в подножието на величествения връх Ботев,
+            в живописната местност „Паниците“ край град Калофер.</p>
+  
+            <a href="location.html" class="card-cta">Открий ни →</a>
+        </div>
+  
+        <div class="about-card">
+          <h3>Комфорт</h3>
+          <p>Стаи с удобни легла, частни бани, тераси с изглед, бърз Wi-Fi и всичко необходимо
+            за спокойна почивка.</p>
+  
+            <a href="location.html" class="card-cta">Научи повече →</a>
+        </div>
+  
+        <div class="about-card">
+          <h3>Удобства</h3>
+          <p>Къщата разполага с: просторен хол с голяма маса, мека мебел и модерна камина, голяма и напълно оборудвана кухня, веранда и голям балкон с гледка към Стара планина и връх Ботев, огромен двор, подходящ за детски игри или събития на открито, затворен паркинг, барбекю на въглища, настолни игри и играчки за деца,
+            колела за разходка из местността.</p>
+  
+            <a href="location.html" class="card-cta">Виж повече  →</a>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <!-- ===== Services / Amenities ===== -->
+
+<section id="services" class="section section-alt">
+    <div class="container-narrow">
+      <h2 class="section-title">Нашите услуги</h2>
+      <p class="lead-text">
+        Изберете удобство от списъка, за да видите всички детайли и условия.
+      </p>
+  
+      <ul class="amenities">
+  
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Безплатен високоскоростен Wi-Fi"
+            data-desc="Интернет над 100 Mbps във всички помещения и двор. Идеален за smart TV, онлайн работа и игри."
+            data-img="img/wi-fi.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-wifi"></i>
+          <span>Безплатен Wi-Fi</span>
+          <button type="button" class="amenity-info" aria-label="повече инфо"><i class="fas fa-info-circle"></i></button>
+        </li>
+      
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Домашна закуска по заявка"
+            data-desc="Приготвена от пресни локални продукти. Вегетариански опции. Доставка до стая."
+            data-img="img/breakfast.jpg"
+            data-included="no" data-price="15 лв/чов.">
+          <i class="fas fa-coffee"></i>
+          <span>Домашна закуска по заявка</span>
+          <button type="button" class="amenity-info" aria-label="повече инфо"><i class="fas fa-info-circle"></i></button>
+        </li>
+      
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Външен басейн (сезонен)"
+            data-desc="Размер: 7×4 м · дълбочина 1.3 м · период: 1 юни – 15 септември. Шезлонги и чадъри включени."
+            data-img="img/swimming-pool-view.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-swimming-pool"></i>
+          <span>Външен басейн (сезонен)</span>
+          <button type="button" class="amenity-info" aria-label="повече инфо"><i class="fas fa-info-circle"></i></button>
+        </li>
+      
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Барбекю & кът с камина"
+            data-desc="Външна камина и барбекю, маса за 10 души. Дърва/въглища и прибори — при заявка."
+            data-img="img/bbq.jpg"
+            data-included="yes" data-price="дърва по заявка">
+          <i class="fas fa-fire"></i>
+          <span>Барбекю & кът с камина</span>
+          <button type="button" class="amenity-info" aria-label="повече инфо"><i class="fas fa-info-circle"></i></button>
+        </li>
+      
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Безплатен паркинг"
+            data-desc="Паркиране в двора за до 4 автомобила. Видеонаблюдение."
+            data-img="img/parking.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-car"></i>
+          <span>Безплатен паркинг</span>
+          <button type="button" class="amenity-info" aria-label="повече инфо"><i class="fas fa-info-circle"></i></button>
+        </li>
+      
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Детски кът и тревни площи"
+            data-desc="Катерушки, пясъчник, оградена зелена зона. Подходящо за малки деца."
+            data-img="img/kids-playground.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-baby"></i>
+          <span>Детски кът и тревни площи</span>
+          <button type="button" class="amenity-info" aria-label="повече инфо"><i class="fas fa-info-circle"></i></button>
+        </li>
+      
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Сауна / Джакузи"
+            data-desc="Сауна за 4-ма + джакузи на открито. Необходимо е предварително записване."
+            data-img="img/sauna.jpg"
+            data-included="no" data-price="40 лв/час">
+          <i class="fas fa-dumbbell"></i>
+          <span>Сауна / Джакузи</span>
+          <button type="button" class="amenity-info" aria-label="повече инфо"><i class="fas fa-info-circle"></i></button>
+        </li>
+      
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Pet-friendly"
+            data-desc="Приемаме домашни любимци до 10 кг. Такса почистване: 20 лв/престой. Необходимо е предварително запитване."
+            data-img="img/dogs-allow.jpg"
+            data-included="no" data-price="20 лв/престой">
+          <i class="fas fa-paw"></i>
+          <span>Pet-friendly</span>
+          <button type="button" class="amenity-info" aria-label="повече инфо"><i class="fas fa-info-circle"></i></button>
+        </li>
+      
+      </ul>
+    </div>
+  </section>
+  
+  
+  
+  <!-- === Gallery Section === -->
+  <section id="gallery" class="section section-alt">
+    <div class="container-narrow">
+  
+      <h2 class="section-title">Галерия</h2>
+      
+      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+  
+        <!-- Dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
+        </div>
+  
+        <!-- Slides -->
+        <div class="carousel-inner rounded-4 shadow-lg">
+  
+          <div class="carousel-item active">
+            <img src="image/kitchen.png" class="d-block w-100" alt="">
+          </div>
+  
+          <div class="carousel-item">
+            <img src="image/bbq.png" class="d-block w-100" alt="">
+          </div>
+  
+          <div class="carousel-item">
+            <img src="image/bethroom1.png" class="d-block w-100" alt="">
+          </div>
+  
+          <div class="carousel-item">
+            <img src="image/toilet.png" class="d-block w-100" alt="">
+          </div>
+  
+          <div class="carousel-item">
+            <img src="image/living-room.png" class="d-block w-100" alt="">
+          </div>
+  
+        </div>
+
+        
+
+  
+        <!-- Arrows -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+  
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+  
+      </div>
+  
+    </div>
+
+    <a href="gallery-full.html" class="gallery-cta">Виж още снимки →</a>
+  
+    
+  </section>
+
+
+  <section id="activities" class="section activities-section">
+    <div class="container-narrow">
+  
+      <h2 class="section-title">Активности в района</h2>
+  
+      <div class="activities-cards">
+  
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/activity-hiking.jpg" alt="Пешеходни маршрути">
+          </div>
+          <div class="activity-content">
+            <h3>Пешеходни маршрути</h3>
+            <p>Екопътеки към връх Ботев, Бяла река, Райското пръскало и множество леки семейни маршрути.</p>
+          </div>
+        </div>
+  
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/activity-biking.jpg" alt="Колоездене">
+          </div>
+          <div class="activity-content">
+            <h3>Колоездене</h3>
+            <p>Разнообразни велопътеки, подходящи за планинско и семейно колоездене. Резиденцията предлага и велосипеди за гости.</p>
+          </div>
+        </div>
+  
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/activity-nature.jpg" alt="Природни гледки и пикници">
+          </div>
+          <div class="activity-content">
+            <h3>Разходки и пикници</h3>
+            <p>Кристално чист въздух, поляни, гори и тихи места за почивка сред природата.</p>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  <!-- ===== Offers / Pricing ===== -->
+  <section id="portfolio" class="section">
+    <div class="container-narrow">
+      <h2 class="section-title">Оферти & Цени</h2>
+  
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Цяла резиденция</h3>
+          <p class="price">от <strong>600 лв</strong> / нощ</p>
+          <ul>
+            <li>Капацитет:  17+3 човека</li>
+            <li>Всички удобства включени</li>
+            <li>7 стаи с голямо двойно легло;</li>
+            <li>1 стая с три единични легла</li>
+            <li><strong>Цена за най-малко 2 нощувки в делничен ден </strong> </li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Заяви запитване</a>
+  
+        </div>
+  
+        <div class="price-card">
+          <h3>Цяла резиденция</h3>
+          <p class="price">от <strong>700 лв</strong> / нощ </p>
+          <ul>
+            <li>Капацитет:  17+3 човека</li>
+            <li>Всички удобства включени</li>
+            <li>7 стаи с голямо двойно легло;</li>
+            <li>1 стая с три единични легла</li>
+            <li><strong>Цена за най-малко 2 нощувки през уикенд </strong> </li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Провери наличност</a>
+  
+        </div>
+  
+        <div class="price-card">
+          <h3>Цяла резиденция</h3>
+          <p class="price">от <strong>1000 лв</strong> / нощ</p>
+          <ul>
+            <li>Капацитет:  17+3 човека</li>
+            <li>Всички удобства включени</li>
+            <li>7 стаи с голямо двойно легло;</li>
+            <li>1 стая с три единични легла</li>
+            <li> <strong> Цена за 1 нощувка</strong></li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Заяви оферта</a>
+  
+        </div>
+      </div>
+  
+      <p class="note">
+        * Цените са ориентировъчни и могат да се променят в зависимост от сезона, празници и заетост.
+        Свържете се с нас за персонална оферта и наличности.
+      </p>
+    </div>
+  </section>
+  
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container-narrow">
+      <h2 class="section-title">Контакти & Локация</h2>
+  
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Свържете се с нас</h3>
+          <p><i class="fas fa-phone"></i> <a href="tel:+359888123456">+359 888 123 456</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@guesthouse.bg">info@guesthouse.bg</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> с. Примерно, ул. Централна 12</p>
+  
+          <form class="contact-form" onsubmit="event.preventDefault(); document.querySelector('#contact').scrollIntoView({behavior:'smooth'}); alert('Благодарим! Ще се свържем с вас.');">
+            <div class="form-row">
+              <input type="text" placeholder="Име" required>
+              <input type="tel" placeholder="Телефон" required>
+            </div>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="4" placeholder="Съобщение / Дати / Брой гости" required></textarea>
+            <button class="btn-primary" type="submit">Изпрати запитване</button>
+          </form>
+        </div>
+  
+        <div class="map-card">
+          <div class="map-embed">
+            <!-- Замени с реален Google Maps embed, когато имаш адрес -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96427.349!2d23.25!3d42.70!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z44Kq44O844OT44Or!5e0!3m2!1sen!2sbg!4v1699999999999"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="border-radius:16px;">
+        <div class="modal-header">
+          <h5 class="modal-title">Свържете се с нас</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <div class="modal-body">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Благодарим! Ще се свържем с вас.');">
+  
+            <!-- Име и телефон -->
+            <div class="form-row">
+              <input type="text" placeholder="Име" required>
+              <input type="tel" placeholder="Телефон" required>
+            </div>
+  
+            <!-- Email -->
+            <input type="email" placeholder="Email" required>
+  
+            <!-- Дати -->
+            <div class="form-row">
+              <label style="font-size:0.9em;">Дата на настаняване:</label>
+              <label style="font-size:0.9em;">Дата на напускане:</label>
+            </div>
+            <div class="form-row">
+              <input type="date" required>
+              <input type="date" required>
+            </div>
+  
+            <!-- Съобщение -->
+            <textarea rows="4" placeholder="Съобщение / Брой гости / Специални изисквания" required></textarea>
+  
+            <button class="btn-primary" type="submit">Изпрати запитване</button>
+  
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <a href="#" id="scrollTopBtn" class="scroll-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+  
+  
+  
+  <!-- Service Info Modal -->
+  <div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius:16px; overflow:hidden;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="serviceModalTitle">Услуга</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Затвори"></button>
+        </div>
+  
+        <div class="modal-body">
+          <img id="serviceModalImg" src="img/guest-house.jpg" alt="Service Preview"
+               style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:14px;">
+  
+          <div class="badges" id="serviceBadges">
+            <!-- динамични баджове: Включено / Доплащане -->
+          </div>
+  
+          <p id="serviceModalDesc" style="margin:0; font-size:1rem; line-height:1.6;">
+            Изберете удобство, за да видите детайли.
+          </p>
+        </div>
+  
+        <div class="modal-footer" style="gap:8px;">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Затвори</button>
+          <button type="button" class="btn btn-primary" id="serviceToContactBtn">
+            Заяви запитване
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <a href="tel:+359888123456" class="sticky-call">
+    <i class="fas fa-phone-alt"></i>
+</a>
+
+
+
+
+
+<footer class="site-footer">
+    <div class="footer-content">
+  
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="image/logo.png" alt="Лого">
+        </div>
+  
+        <div class="footer-message">
+          <p>
+            Добре дошли в Резиденция Балмора – място, където уютът, природата  
+            и спокойствието ви очакват. Благодарим, че сте наши гости!
+          </p>
+        </div>
+      </div>
+  
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:+359888123456"><i class="fas fa-phone-alt"></i></a>
+        <a href="mailto:info@guesthouse.bg"><i class="fas fa-envelope"></i></a>
+      </div>
+  
+      <p class="footer-copy">
+        © 2025 Резиденция Балмора — Всички права запазени.
+      </p>
+  
+    </div>
+  </footer>
+  
+  
+  <script>
+    document.querySelectorAll('.amenity').forEach(item => {
+      item.addEventListener('click', () => {
+        document.getElementById('serviceModalTitle').textContent =
+          item.getAttribute('data-title');
+        document.getElementById('serviceModalDesc').textContent =
+          item.getAttribute('data-desc');
+      });
+    });
+    </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+<!-- for services-->
+
+    
+</body>
+</html>
